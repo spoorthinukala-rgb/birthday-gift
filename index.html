@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday 🎂</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            background: linear-gradient(
+                135deg,
+                #ff9a9e,
+                #fad0c4,
+                #a18cd1
+            );
+            padding: 20px;
+        }
+
+        /* Main Container */
+        .container {
+            width: 100%;
+            max-width: 550px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Birthday Card */
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px 30px;
+            border-radius: 25px;
+
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+
+            animation: pop 1s ease;
+        }
+
+        /* Cake */
+        .cake {
+            font-size: 70px;
+            animation: bounce 1.5s infinite;
+        }
+
+        /* Heading */
+        h1 {
+            color: #ff4081;
+            font-size: 42px;
+            margin: 15px 0;
+        }
+
+        h2 {
+            color: #7b1fa2;
+            font-size: 23px;
+            margin-bottom: 15px;
+        }
+
+        /* Message */
+        p {
+            color: #555;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .wish {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #e91e63;
+            font-weight: bold;
+        }
+
+        /* Video */
+        .video-container {
+            width: 100%;
+            margin-top: 25px;
+            border-radius: 18px;
+            overflow: hidden;
+
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .video-container video {
+            width: 100%;
+            display: block;
+            border-radius: 18px;
+        }
+
+        /* Button */
+        button {
+            margin-top: 25px;
+            padding: 14px 28px;
+
+            border: none;
+            border-radius: 30px;
+
+            background: #ff4081;
+            color: white;
+
+            font-size: 17px;
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.08);
+            background: #e91e63;
+        }
+
+        /* Balloons */
+        .balloon {
+            position: fixed;
+            bottom: -120px;
+
+            font-size: 60px;
+
+            animation: float 8s linear infinite;
+
+            z-index: 1;
+        }
+
+        .b1 {
+            left: 5%;
+            animation-delay: 0s;
+        }
+
+        .b2 {
+            left: 25%;
+            animation-delay: 2s;
+        }
+
+        .b3 {
+            right: 20%;
+            animation-delay: 1s;
+        }
+
+        .b4 {
+            right: 5%;
+            animation-delay: 3s;
+        }
+
+        /* Balloon Animation */
+        @keyframes float {
+
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-120vh) rotate(20deg);
+                opacity: 0;
+            }
+        }
+
+        /* Cake Animation */
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        /* Card Animation */
+        @keyframes pop {
+
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Mobile Design */
+        @media (max-width: 600px) {
+
+            body {
+                padding: 15px;
+            }
+
+            .card {
+                padding: 30px 18px;
+                border-radius: 20px;
+            }
+
+            .cake {
+                font-size: 55px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .wish {
+                font-size: 18px;
+            }
+
+            button {
+                font-size: 16px;
+                padding: 12px 24px;
+            }
+
+            .balloon {
+                font-size: 45px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Floating Balloons -->
+
+    <div class="balloon b1">🎈</div>
+    <div class="balloon b2">🎈</div>
+    <div class="balloon b3">🎈</div>
+    <div class="balloon b4">🎈</div>
+
+
+    <!-- Main Content -->
+
+    <div class="container">
+
+        <div class="card">
+
+            <!-- Cake -->
+
+            <div class="cake">
+                🎂
+            </div>
+
+
+            <!-- Birthday Heading -->
+
+            <h1>
+                Happy Birthday! 🎉
+            </h1>
+
+
+            <h2>
+                💖 Wishing You a Wonderful Day! 💖
+            </h2>
+
+
+            <!-- Birthday Message -->
+
+            <p>
+                May your birthday be filled with
+                happiness, laughter, love and lots of
+                beautiful memories. 🥳
+            </p>
+
+
+            <div class="wish">
+                ✨ Have an amazing year ahead! ✨
+            </div>
+
+
+            <!-- Birthday Video -->
+
+            <div class="video-container">
+
+                <video controls playsinline>
+
+                    <source
+                        src="birthday-video.mp4"
+                        type="video/mp4"
+                    >
+
+                    Your browser does not support
+                    the video tag.
+
+                </video>
+
+            </div>
+
+
+            <!-- Celebrate Button -->
+
+            <button onclick="celebrate()">
+                🎊 Celebrate 🎊
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Confetti Library -->
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+
+    <script>
+
+        function celebrate() {
+
+            // Center burst
+
+            confetti({
+                particleCount: 150,
+                spread: 100,
+                origin: {
+                    y: 0.6
+                }
+            });
+
+
+            // Left burst
+
+            setTimeout(() => {
+
+                confetti({
+                    particleCount: 100,
+                    spread: 120,
+
+                    origin: {
+                        x: 0,
+                        y: 0.7
+                    }
+                });
+
+            }, 300);
+
+
+            // Right burst
+
+            setTimeout(() => {
+
+                confetti({
+                    particleCount: 100,
+                    spread: 120,
+
+                    origin: {
+                        x: 1,
+                        y: 0.7
+                    }
+                });
+
+            }, 600);
+
+        }
+
+
+        // Automatically start confetti
+        // when the website opens
+
+        window.onload = function () {
+
+            setTimeout(celebrate, 800);
+
+        };
+
+    </script>
+
+</body>
+
+</html>
